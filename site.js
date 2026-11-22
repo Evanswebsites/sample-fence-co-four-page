@@ -19,3 +19,27 @@ if (form) {
     }
   });
 }
+
+// 3. Motion: ease list items in as they scroll into view. Items already on screen
+//    are left alone, and nothing happens for visitors who prefer reduced motion.
+//    Delete this block and the "Motion" section of styles.css to remove it all.
+(function () {
+  if (!("IntersectionObserver" in window)) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var items = document.querySelectorAll(
+    ".menu li, .rows > *, .steps li, .quote, .contact-list li, .hours, .form, .cta-band .wrap"
+  );
+  var seen = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add("in"); seen.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  items.forEach(function (el) {
+    var r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight) return;               // already visible on load
+    var siblings = el.parentElement ? el.parentElement.children : [];
+    el.style.setProperty("--i", Math.min(Array.prototype.indexOf.call(siblings, el), 5));
+    el.classList.add("reveal");
+    seen.observe(el);
+  });
+})();

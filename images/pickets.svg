@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="120" viewBox="0 0 112 120">
+  <!-- Four pickets, 24 wide with a 4 gap, so the tile repeats every 112 -->
+  <path d="M0 26 12 2 24 26V120H0Z" fill="#d9b67e"/>
+  <path d="M28 26 40 2 52 26V120H28Z" fill="#cfa871"/>
+  <path d="M56 26 68 2 80 26V120H56Z" fill="#ddbb86"/>
+  <path d="M84 26 96 2 108 26V120H84Z" fill="#c99f67"/>
+  <!-- shaded right edge on each board -->
+  <g fill="#000" fill-opacity=".09">
+    <path d="M21 27 24 26V120H21Z"/>
+    <path d="M49 27 52 26V120H49Z"/>
+    <path d="M77 27 80 26V120H77Z"/>
+    <path d="M105 27 108 26V120H105Z"/>
+  </g>
+  <!-- faint wood grain -->
+  <g stroke="#000" stroke-opacity=".07" stroke-width="1" fill="none">
+    <path d="M6 36V112M17 32V118"/>
+    <path d="M34 34V114M45 38V110"/>
+    <path d="M62 32V118M73 36V112"/>
+    <path d="M90 36V110M101 32V116"/>
+  </g>
+  <!-- nail heads, two per board; the first sits high enough to stay whole in the shorter band -->
+  <g fill="#4a3318" fill-opacity=".55">
+    <circle cx="12" cy="44" r="1.7"/><circle cx="12" cy="100" r="1.7"/>
+    <circle cx="40" cy="44" r="1.7"/><circle cx="40" cy="100" r="1.7"/>
+    <circle cx="68" cy="44" r="1.7"/><circle cx="68" cy="100" r="1.7"/>
+    <circle cx="96" cy="44" r="1.7"/><circle cx="96" cy="100" r="1.7"/>
+  </g>
+</svg>

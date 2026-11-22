@@ -30,7 +30,7 @@
   }
   </script>
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- DEMO ONLY: delete this banner before using this site for a real business. -->
@@ -42,15 +42,15 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html">
+    <a class="brand" href="#top">
       <svg viewBox="0 0 30 30" aria-hidden="true"><path class="m2" d="M2 11 5.5 4 9 11V27H2ZM21 11l3.5-7L28 11v16h-7Z"/><path class="m1" d="M11.5 11 15 4l3.5 7V27h-7Z"/></svg>
       Sample Fence Co.
     </a>
     <nav class="nav" aria-label="Main">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="services.html">Services</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="contact.html">Contact</a>
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
     </nav>
     <a class="btn btn-primary header-call" href="tel:+17145550123"><span class="call-short">Call</span><span class="call-long">Call (714) 555-0123</span></a>
   </div>
@@ -62,19 +62,18 @@
       <h1><span>Fences built straight.</span> <span>Gates that latch.</span></h1>
       <p>New fences, gate repairs, and storm fixes for homes in Anytown and the towns around it.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="contact.html">Get a free estimate</a>
-        <a class="btn btn-secondary" href="services.html">See our services</a>
+        <a class="btn btn-primary" href="#contact">Get a free estimate</a>
+        <a class="btn btn-secondary" href="#services">See our services</a>
       </div>
     </div>
     <div class="pickets" aria-hidden="true"></div>
   </section>
 
-  <section class="section" aria-labelledby="build-h">
+  <section class="section" id="services" aria-labelledby="build-h">
     <div class="wrap split">
       <div class="split-lead">
         <h2 id="build-h">What we build and fix</h2>
         <p>Most jobs are one of these six. If yours isn't, ask.</p>
-        <a class="btn btn-secondary" href="services.html">Service details</a>
       </div>
       <ul class="menu">
         <li>
@@ -105,13 +104,13 @@
     </div>
   </section>
 
-  <section class="section section--wash" aria-labelledby="how-h">
+  <section class="section section--wash" id="how" aria-labelledby="how-h">
     <div class="wrap">
       <h2 id="how-h">How a job works</h2>
       <ol class="steps">
         <li>
           <h3>Tell us what you need</h3>
-          <p>Call, email, or use the form. A few photos of the yard help.</p>
+          <p>Call, email, or use the form below. A few photos of the yard help.</p>
         </li>
         <li>
           <h3>Get a written estimate</h3>
@@ -125,11 +124,11 @@
     </div>
   </section>
 
-  <section class="section" aria-labelledby="say-h">
+  <section class="section" id="reviews" aria-labelledby="say-h">
     <div class="wrap split">
       <div class="split-lead">
         <h2 id="say-h">What customers say</h2>
-        <p><a href="reviews.html">Read more reviews</a></p>
+        <p>Real reviews go here, with each customer's permission.</p>
       </div>
       <!-- EDIT: replace with a real customer review, posted with their permission. -->
       <figure class="quote is-placeholder">
@@ -141,16 +140,65 @@
     </div>
   </section>
 
-  <section class="cta-band" aria-labelledby="cta-h">
-    <div class="wrap">
+  <section class="section section--wash" id="contact" aria-labelledby="contact-h">
+    <div class="wrap"><h2 id="contact-h">Contact</h2><p>Call, email, or send the form. We reply within one business day.</p></div>
+    <div class="wrap contact-grid">
       <div>
-        <h2 id="cta-h">Need a fence or a repair?</h2>
-        <p>Tell us what you need and we'll send a written estimate.</p>
+        <ul class="contact-list">
+          <li><span class="contact-label">Phone</span><p class="contact-value"><a href="tel:+17145550123">(714) 555-0123</a></p></li>
+          <li><span class="contact-label">Email</span><p class="contact-value"><a href="mailto:hello@example.com">hello@example.com</a></p></li>
+          <li><span class="contact-label">Shop address</span><p class="contact-value">1234 Sample Road, Anytown, CA 90000</p></li>
+          <li><span class="contact-label">Service area</span><p class="contact-value">Anytown and nearby cities</p></li>
+        </ul>
+        <h2 id="hours-h">Hours</h2>
+        <table class="hours" aria-labelledby="hours-h">
+          <tbody>
+            <tr><th scope="row">Monday to Friday</th><td>7:00 am to 5:00 pm</td></tr>
+            <tr><th scope="row">Saturday</th><td>8:00 am to 2:00 pm</td></tr>
+            <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
       </div>
-      <a class="btn btn-primary" href="contact.html">Get a free estimate</a>
+
+      <!-- EDIT: to receive real requests, follow the "Contact form" steps in README.md. -->
+      <form class="form" action="#" method="get" data-demo-form>
+        <h2>Request a free estimate</h2>
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Email <span class="optional">(optional)</span></label>
+          <input id="f-email" name="email" type="email" autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="f-need">What do you need?</label>
+          <select id="f-need" name="need" required>
+            <option value="">Choose one</option>
+            <option>New fence</option>
+            <option>Gate or opener</option>
+            <option>Repair</option>
+            <option>Staining or sealing</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-details">Details <span class="optional">(optional)</span></label>
+          <textarea id="f-details" name="details" placeholder="Length of fence, type of material, anything we should know"></textarea>
+        </div>
+        <div hidden><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+        <button class="btn btn-primary" type="submit">Send request</button>
+        <p class="form-status" role="status"></p>
+      </form>
     </div>
   </section>
+
 </main>
+
 
 <footer class="site-footer on-dark">
   <div class="wrap">
@@ -160,12 +208,12 @@
         <p>Fences, gates, and repairs in Anytown and nearby cities.</p>
       </div>
       <div>
-        <p class="footer-h">Pages</p>
+        <p class="footer-h">On this page</p>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div>

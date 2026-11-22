@@ -357,3 +357,8 @@ h3 { font-size: 1.5rem; }
 .pickets { display: none; }
 .hero, .hero--compact { --band: 0px; background-image: none; }
 END (delete this whole line) */
+
+/* One-page version: smooth jump to sections, and leave room for the sticky header */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+[id] { scroll-margin-top: 5.5rem; }
